@@ -1,0 +1,469 @@
+/* CSS Reset và biến cơ bản */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #f8f8f8;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* 1. Header & Navigation */
+.top-bar {
+    background-color: #fff;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+}
+
+.top-bar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-info-top {
+    display: flex;
+    gap: 20px;
+    font-size: 0.85em;
+}
+
+.header-main {
+    background-color: #fff;
+    padding: 15px 0;
+}
+
+.header-main .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #d15c7e; /* Màu hồng/đỏ của logo */
+}
+
+.logo-text {
+    line-height: 1;
+}
+
+.logo-text span {
+    display: block;
+    font-size: 0.5em;
+    font-weight: normal;
+    color: #555;
+}
+
+.nav-links a {
+    padding: 10px 15px;
+    margin-left: 5px;
+    color: #555;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: #d15c7e;
+}
+
+.nav-links a.active {
+    background-color: #fce8ed; /* Màu nền cho nút "Trang chủ" */
+    border-radius: 20px;
+}
+
+/* 2. Welcome Section */
+.welcome-section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.welcome-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #555;
+}
+
+.service-highlights {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.highlight-item {
+    flex-basis: 200px;
+    text-align: center;
+}
+
+.highlight-icon {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #f8f8f8;
+    border: 2px solid #eee;
+    margin: 0 auto 15px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f7e1e6;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Placeholder image styles (using background image simulation) */
+.highlight-icon.icon-1 { background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="%23d15c7e" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15.5v-4.7l-3.35 1.77c-.32.17-.7-.06-.7-.42v-4.1c0-.36.38-.59.7-.42L11 9.2v-4.7c0-.55.45-1 1-1s1 .45 1 1v4.7l3.35-1.77c.32-.17.7.06.7.42v4.1c0 .36-.38.59-.7.42L13 12.8v4.7c0 .55-.45 1-1 1s-1-.45-1-1z"/></svg>'); background-repeat: no-repeat; background-position: center; }
+.highlight-icon.icon-2 { background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="%23d15c7e" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zM12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm0 8c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3z"/></svg>'); background-repeat: no-repeat; background-position: center; }
+.highlight-icon.icon-3 { background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23f7e1e6"/><text x="50" y="50" font-family="Roboto" font-size="10" fill="#d15c7e" text-anchor="middle" dominant-baseline="middle">Nám/Thâm</text></svg>'); background-size: 50%; background-repeat: no-repeat; background-position: center; }
+.highlight-icon.icon-4 { background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23f7e1e6"/><text x="50" y="50" font-family="Roboto" font-size="10" fill="#d15c7e" text-anchor="middle" dominant-baseline="middle">Dưỡng da</text></svg>'); background-size: 50%; background-repeat: no-repeat; background-position: center; }
+
+/* 3. Special Products Section */
+.special-products-section {
+    background-color: #4a4a4a;
+    padding: 50px 0 80px 0;
+    color: #fff;
+    text-align: center;
+}
+
+.special-products-section h2 {
+    font-size: 2em;
+    margin-bottom: 40px;
+    font-weight: 400;
+}
+
+.product-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.product-card {
+    background-color: #666; /* Nền card nhạt hơn */
+    width: 270px;
+    border-radius: 5px;
+    overflow: hidden;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.product-card-header {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #d15c7e;
+    padding: 10px 15px;
+    font-size: 0.9em;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-card-header .old-price {
+    color: #fff; 
+    text-decoration: line-through;
+}
+
+.product-card-image {
+    height: 150px;
+    background-color: #888; 
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 10px;
+    color: #fff;
+    font-size: 1.1em;
+    font-weight: 700;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+    line-height: 1.2;
+}
+
+/* Dùng ảnh giả lập bằng màu nền và chữ */
+.card-1 .product-card-image { background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23c4a7c0"/><text x="50" y="50" font-family="Roboto" font-size="10" fill="white" text-anchor="middle" dominant-baseline="middle">Orchid Fragrance</text></svg>'); }
+.card-2 .product-card-image { background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23a4907c"/><text x="50" y="50" font-family="Roboto" font-size="10" fill="white" text-anchor="middle" dominant-baseline="middle">Living Dale Natural</text></svg>'); }
+.card-3 .product-card-image { background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23e7b8c0"/><text x="50" y="50" font-family="Roboto" font-size="10" fill="white" text-anchor="middle" dominant-baseline="middle">Cardinal Tender</text></svg>'); }
+.card-4 .product-card-image { background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="%2394b998"/><text x="50" y="50" font-family="Roboto" font-size="10" fill="white" text-anchor="middle" dominant-baseline="middle">Bella Spa Line</text></svg>'); }
+
+
+.product-card-content {
+    padding: 15px;
+    padding-bottom: 20px;
+}
+
+.product-card-content p {
+    margin: 5px 0 15px 0;
+    font-size: 0.9em;
+    font-weight: 300;
+}
+
+.btn-select {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #d15c7e;
+    color: #fff;
+    text-align: center;
+    border-radius: 3px;
+    font-weight: 500;
+    transition: background-color 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-select:hover {
+    background-color: #b84b6a;
+}
+
+/* 4. Pricing Section */
+.pricing-section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.pricing-section h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.pricing-section p {
+    font-style: italic;
+    margin-bottom: 40px;
+    color: #777;
+}
+
+.pricing-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.price-card {
+    background-color: #fff;
+    width: 270px;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-top: 5px solid #d15c7e;
+    padding: 0;
+    flex-shrink: 0;
+}
+
+.price-card-header {
+    padding: 25px 15px 15px;
+}
+
+.price-card-header h3 {
+    font-size: 1.8em;
+    color: #d15c7e;
+    margin-bottom: 5px;
+}
+
+.price-card-header p {
+    font-weight: bold;
+    font-style: normal;
+    margin-bottom: 0;
+    color: #333;
+}
+
+.price-card-image {
+    height: 120px;
+    background-color: #eee;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 15px;
+}
+
+/* Giả lập ảnh cho mỗi gói */
+.price-card-image.img-1 { background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23f7e1e6"/><text x="50" y="50" font-family="Roboto" font-size="10" fill="#d15c7e" text-anchor="middle" dominant-baseline="middle">Nail & Hair</text></svg>'); }
+.price-card-image.img-2 { background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23f7e1e6"/><text x="50" y="50" font-family="Roboto" font-size="10" fill="#d15c7e" text-anchor="middle" dominant-baseline="middle">Massage & Hair</text></svg>'); }
+.price-card-image.img-3 { background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23f7e1e6"/><text x="50" y="50" font-family="Roboto" font-size="10" fill="#d15c7e" text-anchor="middle" dominant-baseline="middle">Spa & Manicure</text></svg>'); }
+.price-card-image.img-4 { background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23f7e1e6"/><text x="50" y="50" font-family="Roboto" font-size="10" fill="#d15c7e" text-anchor="middle" dominant-baseline="middle">Body & Spa</text></svg>'); }
+
+
+.service-list {
+    list-style: none;
+    padding: 0 15px 15px;
+    color: #555;
+    font-size: 0.95em;
+    min-height: 120px; /* Đảm bảo chiều cao đồng đều */
+}
+
+.service-list li {
+    padding: 4px 0;
+}
+
+.price-card-footer {
+    padding: 20px 15px;
+    background-color: #f7f7f7;
+}
+
+.btn-buy {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #d15c7e;
+    color: #fff;
+    text-align: center;
+    border-radius: 3px;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.btn-buy:hover {
+    background-color: #b84b6a;
+}
+
+/* 5. Footer */
+.footer {
+    background-color: #333;
+    color: #ccc;
+    padding: 40px 0 20px;
+    font-size: 0.9em;
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.footer-about, .footer-contact, .footer-social {
+    flex: 1;
+    padding: 10px;
+}
+
+.footer-about {
+    flex: 2;
+}
+
+.footer h4 {
+    color: #fff;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+.footer-logo {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #d15c7e;
+    line-height: 1;
+}
+
+.footer-logo span {
+    display: block;
+    font-size: 0.6em;
+    font-weight: normal;
+    color: #999;
+}
+
+.contact-detail {
+    margin: 10px 0;
+    line-height: 1.8;
+}
+
+.btn-send {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #d15c7e;
+    color: #fff;
+    border-radius: 3px;
+    margin-top: 10px;
+}
+
+.footer-social .social-icons a {
+    font-size: 20px;
+    margin-right: 15px;
+    color: #aaa;
+    transition: color 0.3s;
+}
+
+.footer-social .social-icons a:hover {
+    color: #fff;
+}
+
+/* Dùng icon placeholder */
+.social-icons a::before {
+    font-family: Arial, sans-serif;
+    font-size: 1.2em;
+}
+.social-icons a:nth-child(1)::before { content: "f"; } /* Facebook */
+.social-icons a:nth-child(2)::before { content: "t"; } /* Twitter */
+.social-icons a:nth-child(3)::before { content: "i"; } /* Instagram */
+.social-icons a:nth-child(4)::before { content: "y"; } /* Youtube */
+
+.copyright-bar {
+    background-color: #222;
+    color: #888;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.8em;
+    border-top: 1px solid #444;
+}
+
+.hotline {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background-color: #d15c7e;
+    color: #fff;
+    padding: 10px 15px;
+    font-size: 0.9em;
+    border-top-left-radius: 5px;
+    z-index: 1000;
+}
+
+/* Media Queries cho thiết bị di động */
+@media (max-width: 992px) {
+    .nav-links {
+        display: none; 
+    }
+    .header-main .container {
+        justify-content: center;
+    }
+
+    .service-highlights, .product-list, .pricing-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .highlight-item, .product-card, .price-card {
+        margin-bottom: 20px;
+    }
+
+    .footer .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-contact, .footer-social {
+        align-self: center;
+    }
+
+    .social-icons {
+        margin-top: 10px;
+    }
+}
